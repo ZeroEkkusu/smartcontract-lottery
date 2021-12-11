@@ -1,0 +1,49 @@
+# These are the packages my project depends on
+# Brownie will install them prior to compiling
+dependencies:
+# - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@0.2.2
+  - OpenZeppelin/openzeppelin-contracts@4.4.0
+
+# Tell the compiler...
+compiler:
+  # Specific to solc
+  solc:
+    # ... to remap this to that
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.2'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.0'
+
+# Configurations for different networks
+# 🔗 See https://docs.chain.link/docs/reference-contracts/
+# 🔗 and https://docs.chain.link/docs/vrf-contracts/
+networks:
+  rinkeby:
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    vrf_coordinator: '0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B'
+    link_token: '0x01BE23585060835E02B77ef475b0Cc51aA1e0709'
+    keyhash: '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311'
+    # 0.1 LINK
+    fee: 100000000000000000
+    # Verify the smart contract on Etherscan
+    verify: True
+    # Etherscan API
+    explorer_api: 'https://api-rinkeby.etherscan.io/api'
+  # Brownie's Ganahce (imitating Rinkeby)
+  development:
+    keyhash: '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311'
+    fee: 100000000000000000
+  # My local Ganache (imitating Rinkeby)
+  ganache-local:
+    keyhash: '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311'
+    fee: 100000000000000000
+
+# Source the .env file
+dotenv: .env
+wallets:
+  # Reference the private key envs
+  from_key1: ${PRIVATE_KEY_1}
+  from_key2: ${PRIVATE_KEY_2}
+api_keys:
+  # Reference the API key env
+  etherscan: ${ETHERSCAN_TOKEN}
