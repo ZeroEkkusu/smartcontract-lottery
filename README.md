@@ -5,7 +5,7 @@ How the contract works:
 1. Anyone can enter the lottery with 50 USD or more worth of ETH
 2. The owner will choose when the lottery is over
 3. The lottery will select one random winner and transfer the funds
-## Todo
+### Todo
 - Use Chainlink Keepers to end the lottery
 # Setup
 *Note: This isn't a guide on how to set up system for development! For that, see [PatrickAlphaC/smartcontract-lottery](https://github.com/PatrickAlphaC/smartcontract-lottery/blob/main/README.md), which this project is based on.*
@@ -33,15 +33,15 @@ To encrypt your private key, add it to Brownie instead
 brownie accounts new <choose_account_id>
 ```
 # Usage
-## Compile
+### Compile
 ```bash
 brownie compile
 ```
-## Test
+### Test
 ```bash
 brownie test --network <choose_network> -s
 ```
-## Deploy
+### Deploy
 ```bash
 brownie run scripts/deploy_lottery.py --network <choose_network>
 ```
