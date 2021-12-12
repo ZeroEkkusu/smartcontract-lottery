@@ -2,7 +2,6 @@ from scripts.deploy_lottery import deploy_lottery
 from scripts.helpful_scripts import LOCAL_BLOCKCHAIN_ENVIRONMENTS, fund_with_link, get_account, wait_for_randomness
 from brownie import network
 import pytest
-from scripts.deploy_lottery import deploy_lottery
 
 
 def test_can_pick_winner():
