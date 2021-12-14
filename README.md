@@ -6,7 +6,7 @@ How the contract works:
 2. The owner will choose when the lottery is over
 3. The lottery will select one random winner and transfer the funds
 ### Todo
-- Use Chainlink Keepers to end the lottery
+- [ ] Use Chainlink Keepers to end the lottery
 # Setup
 *Note: This isn't a guide on how to set up system for development! For that, see [PatrickAlphaC/smartcontract-lottery](https://github.com/PatrickAlphaC/smartcontract-lottery/blob/main/README.md), which this project is based on.*
 
