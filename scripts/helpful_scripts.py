@@ -22,7 +22,7 @@ def get_account(index=None, id=None, env=None):
         return accounts.load(id)
     # ... from the passed private key env
     if env:
-        accounts.add(config["wallets"]["from_" + env])
+        return accounts.add(config["wallets"]["from_" + env])
 
     # (If not specified)
     # ... from the pre-configured accounts, on index 0, when on a local network
@@ -139,10 +139,12 @@ def wait_for_randomness(lottery):
             headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}).json()
         # Return randomness if received
         if response['status'] == "1":
-            return int(response['result'][0]['topics'][0], 16)
+            return int(response['result'][0]['data'], 16)
 
         # Half sleep time if longer than 15 seconds
         if(sleep_time > 15):
-            sleep_time /= 2
+            sleep_time = int(round(sleep_time/2))
+
+        from_block = to_block
 
         i += 1

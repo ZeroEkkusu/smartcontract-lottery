@@ -8,7 +8,7 @@ How the contract works:
 ### Todo
 - [ ] Use Chainlink Keepers to end the lottery
 # Setup
-*Note: This isn't a guide on how to set up system for development! For that, see [PatrickAlphaC/smartcontract-lottery](https://github.com/PatrickAlphaC/smartcontract-lottery/blob/main/README.md), which this project is based on.*
+*Note: This isn't a guide on how to set up system for development! For that, see [PatrickAlphaC/smartcontract-lottery](https://github.com/PatrickAlphaC/smartcontract-lottery/blob/main/README.md), on which this project is based.*
 
 To set up your new project, either:
 
