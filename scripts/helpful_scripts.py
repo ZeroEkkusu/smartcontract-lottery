@@ -3,7 +3,7 @@
 from brownie import network, accounts, config, MockV3Aggregator, Contract, VRFCoordinatorMock, LinkToken, interface, chain
 import requests
 import time
-import web3
+from web3 import Web3
 
 # Make it easier to work with networks
 FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev"]
@@ -133,7 +133,7 @@ def wait_for_randomness(lottery):
                 "fromBlock": from_block,
                 "toBlock": to_block,
                 "address": lottery.address,
-                "topic0": web3.Web3.keccak(text='RandomnessReceived(uint256)').hex(),
+                "topic0": Web3.keccak(text='RandomnessReceived(uint256)').hex(),
                 "apikey": config["api_keys"]["etherscan"],
             },
             headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}).json()
