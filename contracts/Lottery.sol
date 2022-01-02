@@ -1,7 +1,4 @@
 // SPDX-License-Identifier: MIT
-// Desc: All copies of this software or its substantial portions
-// must include a copy of the terms of the MIT License and also a copyright notice,
-// and may be distributed under different terms and without source code
 
 // Soldity version 0.8.X
 pragma solidity ^0.8.0;
