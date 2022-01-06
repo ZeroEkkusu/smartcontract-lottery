@@ -1,5 +1,5 @@
 # About
-This is an example of a full scale smart contract project, made using [Solidity](https://github.com/ethereum/solidity) and [Brownie](https://github.com/eth-brownie/brownie). You can use this repo as reference when starting a new project.
+This is an example of a full scale smart contract project, made using [Solidity](https://github.com/ethereum/solidity) and [Brownie](https://github.com/eth-brownie/brownie). You can use this repo as a refresher on how to use Brownie and write smart contracts.
 
 How the contract works:
 1. Anyone can enter the lottery with 50 USD or more worth of ETH
